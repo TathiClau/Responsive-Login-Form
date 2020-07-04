@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,600&display=swap');
+
+body {
+  background-color: hsl(0, 100%, 74%);
+  background-image: url('./images/bg-intro-desktop.png');
+  font-family: 'Poppins', 'sans-serif';
+  color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+.container {
+  display: flex;
+  align-items: center;
+  margin: 0 auto; /* Centratizar. */
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  padding: 20px;
+  min-height: 500px;
+  
+}
+
+/*Property call flex-shrink - apenas as divs que são filhas desse container que recebem esse estilo*/
+.container > div {
+  flex: 1; /*All this divs should have equal sizes.*/
+  padding: 0 20px;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 50px;
+}
+
+p {
+  opacity: 0.8;
+  font-size: 15px;
+}
+
+.box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 10px rgba(0, 0, 0, 0.6);
+  margin-bottom: 20px;
+}
+
+.blue-box {
+  background-color: hsl(248, 32%, 49%);
+}
+
+input {
+  display: block; /*Para que o elemento HTML aceite as propriedades width e height, precisamos definir o valor do display como block.*/
+  padding: 15px 25px;
+  font-weight: 500;
+  font-size: 15px;
+  font-family: 'Poppins', 'sans-serif';
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid hsl(246, 25%, 77%);
+}
+
+input:focus {
+  border: 2px solid hsl(246, 25%, 77%);
+  outline:none;
+}
+
+button {
+  background-color: hsl(154, 59%, 51%);
+  cursor: pointer;
+  display: block; /*Para que o elemento HTML aceite as propriedades width e height, precisamos definir o valor do display como block.*/
+  padding: 15px 25px;
+  border: 1px solid hsl(154, 62%, 31%);
+  border-bottom-width: 3px; 
+  border: none;
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+  font-family: 'Poppins', 'sans-serif';
+  width: 100%;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+
+button:focus {
+  outline:none;
+}
+
+button:active {
+  border-bottom-width: 1px;
+  transform: translateY(2px);
+}
+
+small {
+  display: block;
+  color:red;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 15px;
+}
+
+small a {
+   color: hsl(0, 100%, 74%);
+   font-weight: 600;
+   
+}
+
+.form-control {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.form-control small {
+  position: absolute;
+  opacity: 0;
+  bottom: -20px;
+  right: 0;
+  text-align: right;
+}
